@@ -1,1 +1,4 @@
-*.pptx
+*
+!.gitignore
+!*.tex
+!*.pdf

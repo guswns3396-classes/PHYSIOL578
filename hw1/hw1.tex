@@ -66,5 +66,35 @@ $[\text{Ion}]_{\text{out}} = 4\times10^{-3}\text{M}$ as the normal extracellular
 Therefore, for a Kir2.1 channel in a mammalian neuron with $135\text{mM}$ intracellular K\textsuperscript{+} and $4\text{mM}$ extracellular K\textsuperscript{+} at $37^{\circ}\text{C}$, the predicted reversal potential is $\boxed{-94\text{mV}}$.
 
 \section{GHK equation: use physiologic concentrations appropriate for the squid giant axon. Estimate the resting potential of the axon. What might complicate your answer? Be sure to list all parameters you used in your calculation.}
+The GHK equation is given by
+$$E_\text{GHK} = \frac{RT}{F}\ln\frac{p_{\text{K}}[\text{K}]_{\text{out}}+p_{\text{Na}}[\text{Na}]_{\text{out}}+p_{\text{Cl}}[\text{Cl}]_{\text{in}}}{p_{\text{K}}[\text{K}]_{\text{in}}+p_{\text{Na}}[\text{Na}]_{\text{in}}+p_{\text{Cl}}[\text{Cl}]_{\text{out}}}$$
+where: \\
+$R$ is the universal ideal gas constant \\
+$T$ is temperature in kelvins \\
+$F$ is Faraday's constant \\
+$[\text{Ion}]$ is the concentration of the ion \\
+$p_{Ion}$ is the relative permeability of ion
+\\
+
+Then the resting potential of the squid giant axon can be estimated by:
+$$E_{\text{GHK}} = \frac{(8.314\text{J/(mol}\cdot\text{K)})(298.15\text{K})}{9.648\times10^4\text{C/mol}}\ln\frac{(1)(20\text{mM}) + (0.04)(440\text{mM}) + (0.45)(40\text{mM})}{(1)(400\text{mM}) + (0.04)(50\text{mM}) + (0.45)(560\text{mM})}$$
+$$= \frac{(8.314\text{J/(mol}\cdot\text{K)})(298.15\text{K})}{9.648\times10^4\text{C/mol}}(-2.465) = (25.69\text{mV})(-2.465)$$
+$$= \boxed{-63.326\text{mV}}$$
+where: \\
+$T = 298.15K$ is the temperature within the functional range of squid physiology \\ 
+$p_K = 1$ is the relative permeability of K\textsuperscript{+} \\
+$p_\text{Na} = 0.04$ is the relative permeability of Na\textsuperscript{+} \\
+$p_\text{Cl} = 0.45$ is the relative permeability of Cl\textsuperscript{-} \\
+$[\text{K}]_{\text{out}} = 20\text{mM}$ is the concentration of extracellular potassium in squid giant axon \\
+$[\text{K}]_{\text{in}} = 400\text{mM}$ is the concentration of intracellular potassium in squid giant axon \\
+$[\text{Na}]_{\text{out}} = 440\text{mM}$ is the concentration of extracellular sodium in squid giant axon \\
+$[\text{Na}]_{\text{in}} = 50\text{mM}$ is the concentration of intracellular sodium in squid giant axon \\
+$[\text{Cl}]_{\text{out}} = 560\text{mM}$ is the concentration of extracellular chloride in squid giant axon \\
+$[\text{Cl}]_{\text{in}} = 40\text{mM}$ is the concentration of intracellular chloride in squid giant axon \\
+\\
+
+The answer is complicated by the fact permeability can change over time whereas GHK equation models it as constant.
+Also, squids are cold-blooded, meaning their cellular temperature $T$ changes based on the temperature of environment.
+Finally, the GHK equation only models univalent ions and excludes other ions like Ca\textsuperscript{2+}.
 
 \end{document}

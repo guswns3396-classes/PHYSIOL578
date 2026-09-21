@@ -86,9 +86,25 @@ briefly answer the questions below (2-3 sentences each).
 \includegraphics{Picture1.png}
 
 \subsection*{(a) During the activation step, why is gating current transient but ionic current sustained? Why does the gating current appear to peak long before the ionic current?}
+\textcolor{blue}{
+    The gating current reflects the outward movement of the positive charge of the voltage sensor in the channel associated with opening of the activation gate.
+    It is transient because the movement of the sensor is limited. After it stops moving, the current disappears.
+    The gating current comes long before the ionic current because the channel must make 4 conformation changes (from C1 to C2 to C3 to C4 to O) to open in order to let current flow.
+}
 \subsection*{(b) At the end of the voltage step, why does the deactivation of the ionic current coincide with the rebound of the gating current (in other words, why is there no delay in this case)?}
+\textcolor{blue}{
+    The deactivation coincides with the gating current because there is only one conformation change from open to close (from O to C4).
+}
 \subsection*{(c) A second voltage protocol returns the membrane from +20mV to -40mV rather than -80mV. Using the state model and principles from class, draw the predicted OFF gating current and ionic deactivation current traces relative to the originals. Explain the sign, approximate relative size, and timing of each change.}
+\includegraphics{Q2c.png}
 
+\textcolor{blue}{
+    The ionic current is still positive since positive K+ ions are leaving the cell.
+    Conversely, the gating current is negative as the voltage sensor moves inward.
+    The magnitude of both ionic and gating currents are reduced due to the decrease in driving force.
+    Accordingly, the decrease in both current magnitudes are slower.
+    The gating current eventually goes to 0 while ionic current is sustained above zero as there is still some ionic flow.
+}
 \section*{Question 3}
 You record the following single channel current trace (idealized) from a typical voltage-gated potassium channel at steady-state in an outside-out patch at +20 mV with equal 150 mM KCl on both sides of the membrane.  Scale bar on the right shows the single channel current amplitude.  Calculate the following. Include relevant equations and correct units.
 
@@ -169,12 +185,12 @@ You record from a cell heterologously overexpressing a single type of voltage-ga
 }
 \textcolor{blue}{
     $V_{\text{half,B}}$ for when exposed to drug B is $V$ at which $G = 15\text{nS}$.
-    $$V_{\text{half,A}} \approx \boxed{-40\text{mV}}$$
+    $$V_{\text{half,B}} \approx \boxed{-40\text{mV}}$$
 }
 \subsection*{(d) In addition to Vhalf, what parameter in the Boltzmann equation does Drug A appear to impact? Provide at least one hypothesis for how Drug A could affect the voltage sensor S4 to achieve this effect.}
 \textcolor{blue}{
     Drug A seems to impact the "voltage sensitivity" parameter $q$ in the Boltzmann equation.
-    Perhaps Drug A is binding to the voltage sensor S4 in a way that makes it more polar.
+    Perhaps Drug A is binding to the voltage sensor S4 in a way that makes it less polar.
 }
 \subsection*{(e) During lab meeting, some argue that Drug B increases channel number, others say it increases single-channel conductance, still others say it increases maximum open probability. State whether the present G-V data can distinguish between these three possibilities.  Briefly, propose one additional experiment that would help discriminate among the viable explanations.}
 \textcolor{blue}{

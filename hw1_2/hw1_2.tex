@@ -95,26 +95,26 @@ You record the following single channel current trace (idealized) from a typical
 
 \subsection*{(a) Single channel conductance}
 \textcolor{blue}{
-$$I = \gamma(V_m)$$
-$$5\text{pA} = \gamma(20\text{mV})$$
-$$\gamma = \frac{5\text{pA}}{20\text{mV}} = \boxed{250\text{pS}}$$
+    $$I = \gamma(V_m)$$
+    $$5\text{pA} = \gamma(20\text{mV})$$
+    $$\gamma = \frac{5\text{pA}}{20\text{mV}} = \boxed{250\text{pS}}$$
 }
 \subsection*{(b) Open probability}
 \textcolor{blue}{
-$$P_{\text{open}} = \frac{t_{\text{open}}}{t_{\text{total}}}$$
-$$ = \frac{(6+4+2+6+2+4)\text{ms}}{60\text{ms}} = \frac{24}{60} = \boxed{0.4}$$
+    $$P_{\text{open}} = \frac{t_{\text{open}}}{t_{\text{total}}}$$
+    $$ = \frac{(6+4+2+6+2+4)\text{ms}}{60\text{ms}} = \frac{24}{60} = \boxed{0.4}$$
 }
 \subsection*{(c) Mean Open Duration and Mean Closed Duration}
 \textcolor{blue}{
-$$\mu_{\text{open}} = \frac{t_{\text{open}}}{T_{\text{open}}}$$
-where $T_{\text{open}}$ is number of times the channel was open
-$$\mu_{\text{open}} = \frac{24\text{ms}}{6} = \boxed{4\text{ms}}$$
+    $$\mu_{\text{open}} = \frac{t_{\text{open}}}{T_{\text{open}}}$$
+    where $T_{\text{open}}$ is number of times the channel was open
+    $$\mu_{\text{open}} = \frac{24\text{ms}}{6} = \boxed{4\text{ms}}$$
 }
 
 \textcolor{blue}{
-$$\mu_{\text{closed}} = \frac{t_{\text{closed}}}{T_{\text{closed}}}$$
-where $T_{\text{closed}}$ is number of times the channel was closed
-$$\mu_{\text{closed}} = \frac{(60-24)\text{ms}}{7} = \boxed{5.14\text{ms}}$$
+    $$\mu_{\text{closed}} = \frac{t_{\text{closed}}}{T_{\text{closed}}}$$
+    where $T_{\text{closed}}$ is number of times the channel was closed
+    $$\mu_{\text{closed}} = \frac{(60-24)\text{ms}}{7} = \boxed{5.14\text{ms}}$$
 }
 \subsection*{(d) Assuming an ideal two-state model (Figure~\ref{fig:two-state}), estimate $\alpha$ and $\beta$ from the dwell intervals and then predict open probability from those rates. How does this prediction compare with your calculation in (b), and explain if they are different?}
 
@@ -126,18 +126,18 @@ $$\mu_{\text{closed}} = \frac{(60-24)\text{ms}}{7} = \boxed{5.14\text{ms}}$$
 \end{figure}
 
 \textcolor{blue}{
-$$\alpha = \frac{1}{\mu_{\text{open}}} = \frac{1}{4\text{ms}} = \boxed{0.25\text{ms}^{-1}}$$
-$$\beta = \frac{1}{\mu_{\text{closed}}} = \frac{1}{5.14\text{ms}} = \boxed{0.194\text{ms}^{-1}}$$
+    $$\alpha = \frac{1}{\mu_{\text{open}}} = \frac{1}{4\text{ms}} = \boxed{0.25\text{ms}^{-1}}$$
+    $$\beta = \frac{1}{\mu_{\text{closed}}} = \frac{1}{5.14\text{ms}} = \boxed{0.194\text{ms}^{-1}}$$
 }
 \textcolor{blue}{
-$$\hat{P}_{\text{open}} = \frac{\beta}{\alpha + \beta} = \frac{\frac{7}{36}}{\frac{6}{24}+\frac{7}{36}} = \frac{7}{36} = \boxed{0.4375}$$
+    $$\hat{P}_{\text{open}} = \frac{\beta}{\alpha + \beta} = \frac{\frac{7}{36}}{\frac{6}{24}+\frac{7}{36}} = \frac{7}{36} = \boxed{0.4375}$$
 }
 
 \textcolor{blue}{
-The estimated open probability using $\alpha$ and $\beta$ differs from open probability calculated from $t_{\text{open}}$.
-This is likely due to the stochasticity of the system.
-If we were to measure the current for longer,
-we would see open probability using $\alpha$ and $\beta$ converge to open probability calculated from $t_{\text{open}}$.
+    The estimated open probability using $\alpha$ and $\beta$ differs from open probability calculated from $t_{\text{open}}$.
+    This is likely due to the stochasticity of the system.
+    If we were to measure the current for longer,
+    we would see open probability using $\alpha$ and $\beta$ converge to open probability calculated from $t_{\text{open}}$.
 }
 \section*{Question 4}
 You record from a cell heterologously overexpressing a single type of voltage-gated potassium channels (i.e., many channels of a single type are expressed in each cell).  You record under Whole-Cell conditions with normal physiological intracellular and extracellular solutions (namely, Ek=-80) to get the macroscopic steady-state conductance vs voltage curves below under control conditions and in the presence of Drug A and Drug B.  Assume the drugs only effect this potassium channel. Answer the following questions.
@@ -145,9 +145,42 @@ You record from a cell heterologously overexpressing a single type of voltage-ga
 \includegraphics{Picture4.png}
 
 \subsection*{(a) The resting membrane potential for this cell is -60 mV.  How would Drug A change the resting potential (more positive, more negative), if at all?}
+\textcolor{blue}{
+    Drug A would make the resting potential more negative.
+    Because Drug A has higher $G$ at $V = -60\text{mV}$ than Control,
+    more K+ ions are allowed to leave the cell thus hyperpolarizing the cell.
+}
 \subsection*{(b) How would Drug B change the resting potential, if at all?}
+\textcolor{blue}{
+    Drug B would not change the resting potential much.
+    Because Drug B has relatively the same $G$ at $V = -60\text{mV}$ compared to Control,
+    there would be same amount of K+ ions leaving.
+}
 \subsection*{(c) Estimate Vhalf from the curves for control conditions and when exposed to Drug A and Drug B.}
+
+\textcolor{blue}{
+    $V_{\text{half,C}}$ for control condition is $V$ at which $G = 10\text{nS}$.
+    $$V_{\text{half,C}} \approx \boxed{-40\text{mV}}$$
+}
+\textcolor{blue}{
+    $V_{\text{half,A}}$ for when exposed to drug A is also $V$ at which $G = 10\text{nS}$.
+    $$V_{\text{half,A}} \approx \boxed{-65\text{mV}}$$
+}
+\textcolor{blue}{
+    $V_{\text{half,B}}$ for when exposed to drug B is $V$ at which $G = 15\text{nS}$.
+    $$V_{\text{half,A}} \approx \boxed{-40\text{mV}}$$
+}
 \subsection*{(d) In addition to Vhalf, what parameter in the Boltzmann equation does Drug A appear to impact? Provide at least one hypothesis for how Drug A could affect the voltage sensor S4 to achieve this effect.}
+\textcolor{blue}{
+    Drug A seems to impact the "voltage sensitivity" parameter $q$ in the Boltzmann equation.
+    Perhaps Drug A is binding to the voltage sensor S4 in a way that makes it more polar.
+}
 \subsection*{(e) During lab meeting, some argue that Drug B increases channel number, others say it increases single-channel conductance, still others say it increases maximum open probability. State whether the present G-V data can distinguish between these three possibilities.  Briefly, propose one additional experiment that would help discriminate among the viable explanations.}
+\textcolor{blue}{
+    The G-V plot alone cannot determine the cause of the change in channel conductance of a whole-cell.
+    This is due to the fact that $G = N*\gamma*P$ and thus is a single output of 3 different variables.
+    We can discriminate among the explanations by doing a voltage clamp on a single channel
+    to get $\gamma$ and $P$.
+}
 
 \end{document}

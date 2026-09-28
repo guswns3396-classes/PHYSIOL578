@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{ {./assets/} }
+
+\title{PHYSIOL 578: HW 1.3\footnotetext{U-M GPT was used to refine language of answers derived independently.}}
+\author{Jack Yang \\ \href{mailto:yhyunjoo@umich.edu}{yhyunjoo@umich.edu}}
+\date{September 27, 2026}
+
+\begin{document}
+\maketitle
+\section{
+    Identify a ligand-gated ion channel that is not in the course materials.
+    Provide a full description of the receptor, its ligands, and any clinical targets.
+    Relate the receptor function to human physiology. (1 page max)
+}
+The glycine receptor (GlyR) is a member of the pentameric Cys-loop family of ligand-gated ion channels.
+It is assembled from five pore-forming subunits, typically $\alpha$ and $\beta$ subunits.
+Adult receptors are commonly $\alpha$1$\beta$ heteromers, while the $\beta$ subunit helps anchor the receptor to the postsynaptic membrane through the scaffolding protein gephyrin.
+
+Glycine is the primary endogenous agonist.
+Other endogenous amino acids, including $\beta$-alanine and taurine, can act as partial agonists.
+Strychnine is a potent competitive antagonist, whereas compounds such as picrotoxin can inhibit GlyRs through noncompetitive channel block.
+Ethanol, cannabinoids, and ivermectin can positively modulate certain GlyR subtypes, although their effects depend on receptor composition and concentration.
+
+When activated, GlyRs conduct primarily $Cl^-$.
+Opening the channel drives the membrane potential toward the chloride equilibrium potential and increases membrane conductance.
+In mature neurons, this usually produces hyperpolarizing and/or shunting inhibition, reducing the likelihood of action-potential firing.
+GlyRs are especially abundant in the spinal cord, brainstem, and retina, where they regulate motor activity, sensory processing, reflexes, breathing, and pain signaling.
+
+Mutations affecting GlyR subunits—particularly \textit{GLRA1} and \textit{GLRB}—or the glycine transporter GlyT2 can cause hyperekplexia.
+This disorder is characterized by an exaggerated startle response followed by transient generalized muscle stiffness, which may cause unprotected falls or breathing difficulties in infants.
+Clonazepam is commonly used to treat hyperekplexia by strengthening GABAergic inhibition, although it does not directly activate GlyRs.
+GlyR-positive allosteric modulators, particularly those targeting the $\alpha$3 subtype involved in spinal pain pathways, are also being investigated as potential analgesic therapies.
+
+\section{
+    Provide a definition of excitability (your choice).
+    Use the \href{gaba.tonydefazio.com}{gaba.tonydefazio.com} website to measure excitability according to your definition using the cortical neuron model and the GnRH neuron model.
+    Predict the change in excitability in the two models if you were to change one of the parameters in the simulation (GABA PSC frequency, Rin, etc).
+    Quantify your observations. (1 page max)
+}
+We operationally define neuronal excitability as the reciprocal of the \textbf{Rheobase} ($I_{\text{rheo}}$)—the minimum depolarizing current step required to elicit at least one action potential from rest:
+$$\text{Excitability} = \frac{1}{\text{Rheobase}} \quad (\text{pA}^{-1})$$
+Under this definition, a neuron requiring a smaller current step to reach spike threshold exhibits \textbf{higher excitability} (larger $\text{pA}^{-1}$ value), whereas a neuron requiring a larger current step exhibits \textbf{lower excitability} (smaller $\text{pA}^{-1}$ value).
+
+Using the default current-clamp simulation protocols on \href{https://gaba.tonydefazio.com}{gaba.tonydefazio.com}, the baseline \textbf{cortical pyramidal neuron model} exhibits a rheobase of $I_{\text{rheo}} = 600\text{ pA}$, yielding an excitability of:
+$$\text{Excitability}_{\text{cortical}} = \frac{1}{600\text{ pA}} = 1.67 \times 10^{-3}\text{ pA}^{-1} \quad (0.00167\text{ pA}^{-1})$$
+In contrast, the baseline \textbf{mouse GnRH neuron model} exhibits a rheobase of $I_{\text{rheo}} = 10\text{ pA}$, yielding an excitability of:
+$$\text{Excitability}_{\text{GnRH}} = \frac{1}{10\text{ pA}} = 1.00 \times 10^{-1}\text{ pA}^{-1} \quad (0.100\text{ pA}^{-1})$$
+At baseline, the GnRH neuron is \textbf{60.0 times more excitable} than the cortical pyramidal cell ($\frac{0.100}{0.00167} = 60$). This substantial difference arises because GnRH neurons possess a higher intrinsic input resistance ($R_{in}$) and smaller membrane capacitance ($C_m$), generating significantly larger voltage deflections ($\Delta V = I \cdot R_{in}$) for a given current injection.
+
+\textbf{Parameter Shift Prediction \& Observation}: We predict that shifting $E_{\text{GABA}}$ to a more depolarized potential ($0\text{ mV}$) will increase inward synaptic driving force during active GABA PSCs, thereby decreasing the Rheobase and enhancing excitability in both models.
+\begin{itemize}
+    \item \textbf{Cortical Pyramidal Neuron}: Shifting $E_{\text{GABA}}$ from $-80\text{ mV}$ to $0\text{ mV}$ reduces $I_{\text{rheo}}$ from $600\text{ pA}$ to $400\text{ pA}$, increasing excitability to $2.50 \times 10^{-3}\text{ pA}^{-1}$ (\textbf{+50.0\% increase}).
+    \item \textbf{GnRH Neuron}: Shifting $E_{\text{GABA}}$ from $-36.5\text{ mV}$ to $0\text{ mV}$ reduces $I_{\text{rheo}}$ from $10\text{ pA}$ to $2\text{ pA}$, increasing excitability to $5.00 \times 10^{-1}\text{ pA}^{-1}$ (\textbf{+400.0\% increase}).
+\end{itemize}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Model \& Condition} & $E_{\text{GABA}}$ \textbf{(mV)} & \textbf{Rheobase (pA)} & \textbf{Excitability ($\text{pA}^{-1}$)} & \textbf{Relative Shift} \\ \hline
+Cortical (Baseline) & $-80.0\text{ mV}$ & $600\text{ pA}$ & $1.67 \times 10^{-3}\text{ pA}^{-1}$ & Baseline \\ \hline
+Cortical ($E_{\text{GABA}} = 0\text{ mV}$) & $0.0\text{ mV}$ & $400\text{ pA}$ & $2.50 \times 10^{-3}\text{ pA}^{-1}$ & \textbf{+50.0\% Increase} \\ \hline
+GnRH (Baseline) & $-36.5\text{ mV}$ & $10\text{ pA}$ & $1.00 \times 10^{-1}\text{ pA}^{-1}$ & Baseline \\ \hline
+GnRH ($E_{\text{GABA}} = 0\text{ mV}$) & $0.0\text{ mV}$ & $2\text{ pA}$ & $5.00 \times 10^{-1}\text{ pA}^{-1}$ & \textbf{+400.0\% Increase} \\ \hline
+\end{tabular}
+\end{table}
+\end{document}

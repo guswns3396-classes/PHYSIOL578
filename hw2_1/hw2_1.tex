@@ -3,6 +3,8 @@
 \usepackage[margin=0.5in]{geometry}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage[bottom]{footmisc}
+
 \graphicspath{ {./assets/} }
 
 \title{PHYSIOL 578: HW 2.1\footnotetext{U-M GPT was used to refine language of answers derived independently.}}
@@ -17,10 +19,27 @@ The Hippo pathway scaffold protein RASSF1A was originally identified as a tumor 
 \section{
     Please describe both canonical and non-canonical TGF$\beta$ signaling pathways (0.5 point)
 }
+In the canonical pathway, TGF-$\beta$ binds a complex of type II and type I serine/threonine kinase receptors.
+The type II receptor phosphorylates the type I receptor, which then phosphorylates the receptor-regulated SMADs, SMAD2 and SMAD3.
+Phosphorylated SMAD2/3 associate with the co-SMAD SMAD4, enter the nucleus, and work with transcriptional cofactors to activate or repress specific genes.
+SMAD7 provides negative feedback by inhibiting receptor-mediated activation of SMAD2/3.
+
+Noncanonical TGF-$\beta$ signaling includes the ERK, JNK/p38, and PI3K-Akt pathways.
+In the ERK pathway, TGF-$\beta$ receptors activate Ras-Raf-MEK1/2, leading to ERK1/2 phosphorylation and altered cellular activity and gene expression.
+In the JNK/p38 pathway, TRAF6 activates TAK1, which promotes JNK and p38 phosphorylation.
+In the PI3K-Akt pathway, PI3K promotes Akt phosphorylation.
+
+These pathways regulate processes such as survival, proliferation, migration, and EMT.
 
 \section{
     Please describe the classical Hippo pathway in a mammalian system (0.5 point)
 }
+Unlike many signaling pathways, Hippo signaling has no clear ligand-receptor pair.
+Still, the pathway involves LATS1/2 inhibiting YAP by phosphorylating it.
+This prevents YAP from going into the nucleus to partner with TEAD to activate growth.
+Other regulators of the signaling are AMPK, which can directly inhibit YAP by phosphorylating it,
+PKA, which can indirectly inhibit YAP, and phosphatidic acid, which can indirectly promote YAP by inhibiting LATS1/2.
+
 
 \section{
     If RASSF1A positively promotes the TGF$\beta$ signaling,
@@ -30,10 +49,25 @@ The Hippo pathway scaffold protein RASSF1A was originally identified as a tumor 
     What are the expression levels of these profibrogenic genes when RASSF1A becomes methylated (0.5 point)?
     (Note: methylation is positively correlated with gene silencing)
 }
+If the RASSF1A gene is methylated, the signaling cascade will be diminished and the gene targets will be less strongly induced.
+The treatment of TGF$\beta$ will activate the canonical and non-canonical signaling pathways to phophorylate SMAD2/3 (canonical)
+as well as ERK1/2, JNK/p38, and AKT (non-canonical) which will increase the gene expression.
+
+Profibrogenic genes that are induced by TGF$\beta$ inclue COL1A1, CCN2, ACTA2.
+These genes will show lower expression since methylation of RASSF1A will dminish the TGF$\beta$ signaling.
+
 
 \section{
     You hypothesize that RASSF1A might enhance YAP's interaction with SMAD signaling in cancer cells.
     Please describe experiments to examine the effects of RASSF1A overexpression and knockdown on YAP phosphorylation (0.5 point)
     and on the YAP-SMAD4 interaction following phosphatic acid stimulation (0.5 point).
 }
+ To examine how RASSF1A affects YAP phosphorylation, we could perform a Western blot for p-YAP (Ser127)
+ and total YAP after RASSF1A overexpression or knockdown.
+ RASSF1A overexpression is expected to increase YAP phosphorylation, whereas knockdown is expected to decrease it.
+
+To examine the YAP-SMAD4 interaction after phosphatidic acid stimulation,
+perform a co-immunoprecipitation assay for YAP and SMAD4.
+If RASSF1A enhances their interaction, overexpression should increase YAP-SMAD4 binding, whereas knockdown should decrease it.
+
 \end{document}

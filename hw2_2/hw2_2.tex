@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[bottom]{footmisc}
+
+\graphicspath{ {./assets/} }
+
+\title{PHYSIOL 578: HW 2.2\footnotetext{U-M GPT was used to help draft and refine the answers.}}
+\author{Jack Yang \\ \href{mailto:yhyunjoo@umich.edu}{yhyunjoo@umich.edu}}
+\date{September 29, 2026}
+
+\begin{document}
+\maketitle
+
+\section{
+    BDNF is an important neurotrophic factor that promotes neurogenesis and synaptogenesis.
+    BDNF binds to its receptor TrkB on the plasma membrane.
+    Please describe how BDNF activates TrkB and its downstream signaling pathways, and how you would experimentally test activation of these pathways.
+}
+There are two main signaling pathways when BDNF activates TrkB.
+
+The first is the Ras-Raf-MEK-ERK pathway.
+BDNF binds TrkB, causing receptor dimerization and tyrosine autophosphorylation.
+Phosphorylated TrkB recruits SHC, followed by Grb2 and SOS.
+SOS activates the small GTPase Ras.
+Ras initiates the kinase cascade: Ras$\rightarrow$Raf$\rightarrow$MEK1/2$\rightarrow$ERK1/2.
+ERK phosphorylates cytoplasmic and nuclear proteins, changing gene expression.
+
+The second is the PLC$\gamma$-IP$_3$ pathway.
+The activated TrkB recruits and phosphorylates PLC$\gamma$.
+PLC$\gamma$ cleaves the membrane lipid PIP$_2$ into PIP$_3$ and DAG.
+IP$_3$ binds IP$_3$ receptors on the ER, releasing Ca$^{2+}$ into the cytosol.
+This activates calmodulin-dependent signaling, including CaMKs.
+At the same time, DAG, together with Ca$^{2+}$ ctivates protein kinase C.
+
+You could test the activation of these pathways by treating cells expressing TrkB with BDNF and comparing them with untreated controls.
+Then you can use Western blots with phospho-specific antibodies to measure activation of TrkB and its downstream pathways, including p-TrkB, p-ERK1/2 for the MAPK pathway, p-AKT for the PI$_3$K-AKT pathway, and p-PLC$\gamma$ for the PLC$\gamma$ pathway, while measuring the corresponding total proteins as controls.
+Co-immunoprecipitation could additionally test whether activated TrkB associates with adaptor proteins.
+
+\end{document}

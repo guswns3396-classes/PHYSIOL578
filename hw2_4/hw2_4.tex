@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[bottom]{footmisc}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{tabularx}
+
+\graphicspath{ {./assets/} }
+
+\pagestyle{fancy}
+\fancyhf{} % clear existing header/footer entries
+% Place Page X of Y on the right-hand
+% side of the footer
+\fancyfoot[R]{Yang \thepage \hspace{1pt} of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+
+\title{PHYSIOL 578: HW 2.4\footnotetext{U-M GPT was used to help draft and refine the answers.}}
+\author{Jack Yang \\ \href{mailto:yhyunjoo@umich.edu}{yhyunjoo@umich.edu}}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+\section*{
+    Q1.
+    You performed mass spectrometry on immunopurified mTOR kinase from HEK293T cells and identified a novel protein (TIP1; TOR Interacting Protein 1).
+    Sequence analysis revealed that TIP1 is a unique protein with a molecular mass of 35 kDa, and no similar proteins to TIP1 have been identified in the human genome.
+    You successfully generated an antibody that specifically recognizes TIP1 (35 kD protein) in western blotting using HEK293T cell lysates.
+    However, the TIP1 antibody does not work for immunoprecipitation. \\
+    \\
+    How would you determine which mTOR complex contains TIP1? \\
+    \\
+    \underline{Provide one key experiment and describe how you would interpret the results.} \\
+    \\
+    (For your experiments, assume you have antibodies (for western blotting and immunoprecipitation experiments) for the components of the mTOR complexes. (2 points)
+}
+
+Perform co-immunoprecipitation under lysis conditions that preserve mTOR complexes, such as CHAPS. Immunoprecipitate Raptor to isolate mTORC1 and, in parallel, Rictor to isolate mTORC2. Include a nonspecific IgG immunoprecipitation as a negative control. Then immunoblot each precipitate using the TIP1 antibody. Blotting for mTOR, Raptor, and Rictor can confirm that the appropriate complexes were successfully isolated.
+
+If TIP1 co-immunoprecipitates with Raptor but not Rictor, TIP1 associates with mTORC1.
+If TIP1 co-immunoprecipitates with Rictor but not Raptor, TIP1 associates with mTORC2.
+If TIP1 co-immunoprecipitates with both, it may associate with both complexes.
+If TIP1 is detected in neither, its interaction may be weak or disrupted during lysis, or it may associate with a different mTOR-containing complex.
+
+The absence of TIP1 from the IgG control would support the specificity of the observed association.
+
+\section*{
+    Q2.
+    You performed mass spectrometry analyses of the immunopurified GATOR2 from HEK293T cells treated with a glucose-free medium and identified a novel GATOR2-interacting protein (GG2IP; Glucose-sensitive GATOR2 Interacting Protein).
+    You failed to detect GG2IP peptides in mass spectrometry analyses when you prepared the sample under glucose (500 mg/dl)-replete conditions.
+    Knockdown of endogenous GG2IP using several shRNAs consistently enhanced S6K1 and 4EBP1 phosphorylation in HEK293T cells under glucose-starved conditions, but had no effect under glucose-replete conditions.
+    In contrast, Akt phosphorylation was enhanced in HEK293T cells lacking GG2IP expression under glucose-starved conditions. \\
+    \\
+    Describe the roles of GG2IP in the regulation of mTORC1 and mTORC2 activity.
+}
+
+GG2IP appears to be a glucose-dependent negative regulator of both mTORC1 and mTORC2 signaling. Under glucose-replete conditions, GG2IP knockdown has no detectable effect. Under glucose-starved conditions, GG2IP associates with GATOR2 and normally suppresses mTORC1 activity, as shown by the increased phosphorylation of S6K1 and 4E-BP1 following GG2IP knockdown. One possible mechanism is that GG2IP inhibits GATOR2, thereby allowing GATOR1 to suppress mTORC1. GG2IP also normally suppresses mTORC2-dependent AKT phosphorylation during glucose starvation, because loss of GG2IP increases AKT phosphorylation.
+
+
+\end{document}
